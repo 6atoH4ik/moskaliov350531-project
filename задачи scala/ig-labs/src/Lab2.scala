@@ -16,7 +16,7 @@ object Lab2{
 trait Stream[+A] {
   import Stream._
 
-  def takeWhile(p: A => Boolean): Stream[A] =  this match {   //условие возврата
+  def takeWhile(p: A => Boolean): Stream[A] =  this match {
     case Empty => empty
     case Cons(h, t) if p(h()) => cons(h(), t().takeWhile(p))
     case Cons(h, t) if !p(h()) => empty

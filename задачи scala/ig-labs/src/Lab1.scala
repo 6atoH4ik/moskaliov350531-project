@@ -2,39 +2,41 @@
 // диапазоне.
 
 object Lab1 {
-
-  /**
-    *
-    * @param number
-    * @param c callback function
-    * @return result of the operation in seq
-    */
-  def task(number: Int, c: (Int, Int) => Int): Int = {
-    def factorialWithAccumulator(accumulator: Int, number: Int): Int = {
-      if (number == 1) accumulator
-      else factorialWithAccumulator(c(accumulator, number), number - 1)
-    }
-    factorialWithAccumulator(1, number)
+  def Sum(start: BigInt, end: BigInt) : BigInt = {
+    if (start > end) 0 else start + Sum(start+1, end)
   }
 
-  /**
-    *
-    * @param a
-    * @param b
-    * @return sum of two numbers
-    */
-  def sum(a: Int, b: Int): Int = a + b
+  def Mult(start: BigInt, end: BigInt) : BigInt = {
+    if (start > end) 1 else start * Mult(start+1, end)
+  }
 
-  /**
-    *
-    * @param a
-    * @param b
-    * @return multiply two numbers
-    */
-  def multiply(a: Int, b: Int): Int = a * b
+  def SumTail( start: BigInt, end: BigInt) : BigInt = {
+    SumTailAccum(start, end, 0)
+  }
 
-  def main(args: Array[String]):Unit = {
-    println("Произведение чисел от 1 до 5 = " + task(5, multiply))
-    println("Сумма чисел от 1 до 5 = " + task(5, sum))
+  def SumTailAccum( start : BigInt, end : BigInt, acc: BigInt) : BigInt = {
+    if(start > end) acc else SumTailAccum(start+1, end, acc+start)
+  }
+
+  def MultTail(start: BigInt, end: BigInt) : BigInt = {
+    MultTailAccum(start, end, 1)
+  }
+
+  def MultTailAccum( start : BigInt, end : BigInt, acc: BigInt) : BigInt = {
+    if(start > end) acc else MultTailAccum( start+1, end, acc*start)
+  }
+
+
+
+  def Myfunc(start: BigInt, end: BigInt, c:(BigInt, BigInt) => BigInt) : BigInt = {
+    c(start,end)
+  }
+
+
+  def main(args: Array[String]) : Unit = {
+    println( Myfunc(2,4,Sum) )
+    println( Myfunc(2,4,Mult) )
+    println( Myfunc(2,4,SumTail) )
+    println( Myfunc(2,4,MultTail) )
   }
 }
