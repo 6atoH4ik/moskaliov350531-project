@@ -3,49 +3,20 @@
 // def takeWhile(p: A => Boolean): Stream[A]
 
 object Lab2{
-  def main(args: Array[String]) {
-    val stream: Stream[Int] = Stream(1, 2, 3, 4, 5, 6)
-    println("Stream:" + stream.toList)
 
-    val streamLessThan4: Stream[Int] = stream.takeWhile((x: Int) => x < 4)
-    println("stream(<4):" + streamLessThan4.toList)
-  }
-
-}
-
-trait Stream[+A] {
   import Stream._
 
-  def takeWhile(p: A => Boolean): Stream[A] =  this match {
-    case Empty => empty
-    case Cons(h, t) if p(h()) => cons(h(), t().takeWhile(p))
-    case Cons(h, t) if !p(h()) => empty
+  def takeWhile[A](s: Stream[A], f: A => Boolean): Stream[A] = s match {
+    case h #:: t if (f(h)) => h #:: takeWhile(t, f)
+    case _ => Stream.Empty
   }
 
-  def toList: List[A] = {
-    @annotation.tailrec
-    def go(l: List[A], s: Stream[A]): List[A] = s match {
-      case Empty => l.reverse
-      case Cons(h,t) => go(h()::l, t())
-    }
+  val range  = Stream(1 to 500).toString
+  def get(v: Int): Boolean = v < 30
+  range.takeWhile (get => true)
 
-    go(List(), this)
-  }
-}
-
-
-case object Empty extends Stream[Nothing]
-case class Cons[+A](h: () => A, t: () => Stream[A]) extends Stream[A]
-
-object Stream {
-  def empty[A]: Stream[A] = Empty
-
-  def cons[A](hd: => A, tl: => Stream[A]): Stream[A] = {
-    lazy val head = hd
-    lazy val tail = tl
-    Cons(() => head, () => tail)
+  def main(args: Array[String]) : Unit = {
+    println(range)
   }
 
-  def apply[A](as: A*): Stream[A] =
-    if(as.isEmpty) empty else cons(as.head, apply(as.tail: _*))
 }
