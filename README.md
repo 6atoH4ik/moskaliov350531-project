@@ -55,3 +55,10 @@
 - стабильность работы
 - защита от ввода некорректных данных
 
+#Диаграммы
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/class%20mb.png)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/activity.png)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/Sequences.png)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/state.pngg)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/use-case.png)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/Расположение.png)]
