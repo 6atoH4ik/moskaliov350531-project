@@ -56,9 +56,15 @@
 - защита от ввода некорректных данных
 
 #Диаграммы
+###Диаграмма 1
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/class%20mb.png)]
+###Диаграмма 2
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/activity.png)]
+###Диаграмма 3
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/Sequences.png)]
+###Диаграмма 4
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/state.pngg)]
+###Диаграмма 5
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/use-case.png)]
+###Диаграмма 6
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/Расположение.png)]
