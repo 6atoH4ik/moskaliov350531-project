@@ -63,7 +63,7 @@
 ###Диаграмма 3
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/Sequences.png)]
 ###Диаграмма 4
-[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/state.pngg)]
+[![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/state.png)]
 ###Диаграмма 5
 [![N|Solid](https://github.com/6atoH4ik/moskaliov350531-project/blob/master/Приложение%20для%20вызова%20такси/use-case.png)]
 ###Диаграмма 6
